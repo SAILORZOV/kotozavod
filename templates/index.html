@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Котозавод — Главная</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar_inner">
+      <div class="logo">Логотип</div>
+      <div class="menu">
+        <a href="{{ url_for('index') }}">Главная</a>
+        <a href="{{ url_for('factory') }}">Завод котов</a>
+        <a href="{{ url_for('cart') }}">Корзина</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <h1>Добро пожаловать на Котозавод!</h1>
+
+    <section>
+      <h2>Котозавод</h2>
+      <div class="samples">
+        <div class="cat-card">Кот 1</div>
+        <div class="cat-card">Кот 2</div>
+        <div class="cat-card">Кот 3</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Счастливые клиенты</h2>
+      <div class="clients">
+        <div class="client-card">Клиент 1</div>
+        <div class="client-card">Клиент 2</div>
+        <div class="client-card">Клиент 3</div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

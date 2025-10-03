@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Собери своего кота</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar_inner">
+      <div class="logo">Логотип</div>
+        <div class="menu">
+          <a href="{{ url_for('index') }}">Главная</a>
+          <a href="{{ url_for('factory') }}">Завод котов</a>
+          <a href="{{ url_for('cart') }}">Корзина</a>
+        </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <h1>Собери своего кота</h1>
+    <div class="factory">
+      <div class="cat-preview">
+        <img src="{{ url_for('static', filename='pics/logo.png') }}" alt="Ваш кот" width="200">
+      </div>
+      <div class="cat-parts">
+        <ul>
+          <li>Уши</li>
+          <li>Глаза</li>
+          <li>Нос</li>
+          <li>Усы</li>
+          <li>Хвост</li>
+        </ul>
+        <button>Сбросить</button>
+        <button>В корзину</button>
+      </div>
+    </div>
+
+    <form class="fake-form">
+      <label>Имя: <input type="text" name="name"></label><br>
+      <label>Телефон: <input type="text" name="phone"></label><br>
+      <label>Email: <input type="email" name="email"></label><br>
+      <label><input type="checkbox"> Согласен на обработку данных</label><br>
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+</body>
+</html>

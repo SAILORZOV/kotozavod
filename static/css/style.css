@@ -1,0 +1,181 @@
+/* === Общие стили === */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+h1, h2 {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+/* === Навигация === */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  z-index: 1000;
+  justify-content: center;
+}
+
+.navbar_inner {
+  width: 95%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:visited {
+  color: white;
+}
+
+.navbar a:hover {
+  color: lightgray;
+}
+
+.navbar a:active {
+  color: lightgray;
+}
+
+.logo {
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.menu {
+  display: flex;
+  gap: 15px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+/* === Контент под шапкой === */
+.content {
+  margin-top: 70px;
+  padding: 20px;
+}
+
+/* === Карточки котов / клиентов === */
+.samples, .clients {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.cat-card, .client-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 150px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* === Завод котов === */
+.factory {
+  display: flex;
+  gap: 40px;
+  margin: 20px 0;
+}
+
+.cat-preview {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cat-parts {
+  flex: 1;
+}
+
+.cat-parts ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cat-parts li {
+  background: white;
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.cat-parts button {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 8px 12px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cat-parts button:hover {
+  background-color: #555;
+}
+
+/* === Форма на заводе === */
+.fake-form {
+  margin-top: 20px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  max-width: 400px;
+}
+
+.fake-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.fake-form input[type="text"],
+.fake-form input[type="email"] {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.fake-form button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.fake-form button:hover {
+  background-color: #555;
+}
+
+/* === Корзина === */
+.cart {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  max-width: 500px;
+}
