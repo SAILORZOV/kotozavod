@@ -2,24 +2,48 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+<<<<<<< Updated upstream
   <title>Корзина</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+=======
+  <title>Корзина котов</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script defer src="{{ url_for('static', filename='js/cart.js') }}"></script>
+>>>>>>> Stashed changes
 </head>
 <body>
   <div class="navbar">
     <div class="navbar_inner">
+<<<<<<< Updated upstream
       <div class="logo">Логотип</div>
         <div class="menu">
           <a href="{{ url_for('index') }}">Главная</a>
           <a href="{{ url_for('factory') }}">Завод котов</a>
           <a href="{{ url_for('cart') }}">Корзина</a>
         </div>
+=======
+      <div class="logo">Котозавод</div>
+      <div class="menu">
+        <a href="{{ url_for('index') }}">Главная</a>
+        <a href="{{ url_for('factory') }}">Завод котов</a>
+        <a href="{{ url_for('cart') }}">Корзина</a>
+      </div>
+>>>>>>> Stashed changes
     </div>
   </div>
 
   <div class="content">
+<<<<<<< Updated upstream
     <h1>Ваша корзина</h1>
     <p>Пока корзина пуста. Добавьте кота на странице завода 🐱</p>
   </div>
+=======
+    <h1>Корзина котов 🛒</h1>
+    <div id="cart-list"></div>
+    <p><a href="/factory">← Назад на фабрику</a></p>
+  </div>
+
+  <footer>© 2025 Котозавод. Ваши котики ждут дома 🐾</footer>
+>>>>>>> Stashed changes
 </body>
 </html>
