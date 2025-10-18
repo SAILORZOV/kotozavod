@@ -3,24 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>Корзина котов</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <script defer src="{{ url_for('static', filename='js/cart.js') }}"></script>
 
-  <style>
-    .cat-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      border-bottom: 1px solid #ccc;
-      padding: 8px;
-    }
-    .cat-item img { width: 80px; border-radius: 8px; }
-    .cat-item button { margin-left: auto; }
-  </style>
 </head>
 <body>
-  <h1>Корзина котов 🛒</h1>
-  <div id="cart-list"></div>
+  <div class="navbar">
+    <div class="navbar_inner">
+      <div class="logo">Котозавод</div>
+      <div class="menu">
+        <a href="{{ url_for('index') }}">Главная</a>
+        <a href="{{ url_for('factory') }}">Завод котов</a>
+        <a href="{{ url_for('cart') }}">Корзина</a>
+      </div>
+    </div>
+  </div>
 
-  <p><a href="/factory">Назад на фабрику</a></p>
+  <div class="content">
+    <h1>Корзина котов 🛒</h1>
+    <div id="cart-list"></div>
+    <p><a href="{{ url_for('factory') }}">← Назад на фабрику</a></p>
+  </div>
+
+  <!-- Контейнер для уведомлений -->
+  <div id="toast-container"></div>
+
+  <footer>© 2025 Котозавод. Ваши котики ждут дома 🐾</footer>
 </body>
 </html>

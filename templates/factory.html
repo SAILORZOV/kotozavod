@@ -9,7 +9,7 @@
 <body>
   <div class="navbar">
     <div class="navbar_inner">
-      <div class="logo">Логотип</div>
+      <div class="logo">Котозавод</div>
       <div class="menu">
         <a href="{{ url_for('index') }}">Главная</a>
         <a href="{{ url_for('factory') }}">Завод котов</a>
@@ -68,21 +68,16 @@
       <label>Телефон: <input type="text" id="phone"></label>
       <label>Почта: <input type="email" id="email"></label>
 
-      <label>
-        <input type="radio" name="contact" value="phone"> Связаться по телефону
-      </label>
-      <label>
-        <input type="radio" name="contact" value="email"> Связаться по почте
-      </label>
-
-      <label>
-        <input type="checkbox" id="agree"> Согласие на обработку данных
-      </label>
+      <label><input type="radio" name="contact" value="phone"> Связаться по телефону</label>
+      <label><input type="radio" name="contact" value="email"> Связаться по почте</label>
+      <label><input type="checkbox" id="agree"> Согласие на обработку данных</label>
 
       <button onclick="sendRequest()">Послать</button>
       <p id="form-message"></p>
     </div>
   </div>
   <div id="toast-container"></div>
+
+  <footer>© 2025 Котозавод. Все коты пушистые 🐈</footer>
 </body>
 </html>

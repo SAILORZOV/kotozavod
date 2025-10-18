@@ -5,7 +5,7 @@ const parts = {
   tail: 1
 };
 
-const maxParts = 3;
+const maxParts = 5;
 
 function changePart(part, direction) {
   parts[part] += direction;
