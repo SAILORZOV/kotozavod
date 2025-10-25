@@ -2,24 +2,48 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Корзина</title>
+  <title>Корзина котов</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script defer src="{{ url_for('static', filename='js/cart.js') }}"></script>
 </head>
 <body>
   <div class="navbar">
     <div class="navbar_inner">
-      <div class="logo">Логотип</div>
-        <div class="menu">
-          <a href="{{ url_for('index') }}">Главная</a>
-          <a href="{{ url_for('factory') }}">Завод котов</a>
-          <a href="{{ url_for('cart') }}">Корзина</a>
-        </div>
+      <div class="logo">Котозавод</div>
+      <div class="menu">
+        <a href="{{ url_for('index') }}">Главная</a>
+        <a href="{{ url_for('factory') }}">Завод котов</a>
+        <a href="{{ url_for('cart') }}">Корзина</a>
+      </div>
     </div>
   </div>
 
   <div class="content">
-    <h1>Ваша корзина</h1>
-    <p>Пока корзина пуста. Добавьте кота на странице завода 🐱</p>
+    <h1>Корзина котов 🛒</h1>
+    <div id="cart-list"></div>
+
+    <!-- Форма для отправки выбранных котов -->
+    <div class="send-form" id="send-form" style="display: none;">
+      <h3>📧 Отправить выбранных котов по почте</h3>
+      <label>Ваш email: <input type="email" id="user-email" placeholder="example@mail.ru"></label>
+      <label>Комментарий: <textarea id="email-comment" placeholder="Ваш комментарий к заказу..."></textarea></label>
+      <button onclick="sendSelectedCats()">📤 Отправить выбранных котов</button>
+      <p id="send-message"></p>
+    </div>
+
+    <div class="cart-actions">
+      <button id="send-selected-btn" onclick="showSendForm()" disabled>
+        📸 Отправить выбранных котов по почте
+      </button>
+      <button onclick="clearCart()">🗑️ Очистить корзину</button>
+    </div>
+
+    <p><a href="{{ url_for('factory') }}">← Назад на фабрику</a></p>
   </div>
+
+  <!-- Контейнер для уведомлений -->
+  <div id="toast-container"></div>
+
+  <footer>© 2025 Котозавод. Ваши котики ждут дома 🐾</footer>
 </body>
 </html>
