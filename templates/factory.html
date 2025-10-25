@@ -2,46 +2,27 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-<<<<<<< Updated upstream
   <title>Собери своего кота</title>
-=======
-  <title>Котозавод — Создай кота</title>
->>>>>>> Stashed changes
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
   <div class="navbar">
     <div class="navbar_inner">
-<<<<<<< Updated upstream
       <div class="logo">Логотип</div>
         <div class="menu">
           <a href="{{ url_for('index') }}">Главная</a>
           <a href="{{ url_for('factory') }}">Завод котов</a>
           <a href="{{ url_for('cart') }}">Корзина</a>
         </div>
-=======
-      <div class="logo">Котозавод</div>
-      <div class="menu">
-        <a href="{{ url_for('index') }}">Главная</a>
-        <a href="{{ url_for('factory') }}">Завод котов</a>
-        <a href="{{ url_for('cart') }}">Корзина</a>
-      </div>
->>>>>>> Stashed changes
     </div>
   </div>
 
   <div class="content">
-<<<<<<< Updated upstream
     <h1>Собери своего кота</h1>
-=======
-    <h1>Создай своего кота 😺</h1>
-
->>>>>>> Stashed changes
     <div class="factory">
       <div class="cat-preview">
         <img src="{{ url_for('static', filename='pics/logo.png') }}" alt="Ваш кот" width="200">
       </div>
-<<<<<<< Updated upstream
       <div class="cat-parts">
         <ul>
           <li>Уши</li>
@@ -49,34 +30,12 @@
           <li>Нос</li>
           <li>Усы</li>
           <li>Хвост</li>
-=======
-
-      <div class="cat-parts">
-        <ul>
-          <li><strong>Тело</strong><br>
-            <button onclick="changePart('body', -1)">←</button>
-            <button onclick="changePart('body', 1)">→</button>
-          </li>
-          <li><strong>Голова</strong><br>
-            <button onclick="changePart('head', -1)">←</button>
-            <button onclick="changePart('head', 1)">→</button>
-          </li>
-          <li><strong>Лапы</strong><br>
-            <button onclick="changePart('paws', -1)">←</button>
-            <button onclick="changePart('paws', 1)">→</button>
-          </li>
-          <li><strong>Хвост</strong><br>
-            <button onclick="changePart('tail', -1)">←</button>
-            <button onclick="changePart('tail', 1)">→</button>
-          </li>
->>>>>>> Stashed changes
         </ul>
         <button>Сбросить</button>
         <button>В корзину</button>
       </div>
     </div>
 
-<<<<<<< Updated upstream
     <form class="fake-form">
       <label>Имя: <input type="text" name="name"></label><br>
       <label>Телефон: <input type="text" name="phone"></label><br>
@@ -85,24 +44,5 @@
       <button type="submit">Отправить</button>
     </form>
   </div>
-=======
-    <div class="fake-form">
-      <h3>Оставить заявку</h3>
-      <label>Имя: <input type="text" id="name"></label>
-      <label>Телефон: <input type="text" id="phone"></label>
-      <label>Почта: <input type="email" id="email"></label>
-
-      <label><input type="radio" name="contact" value="phone"> Связаться по телефону</label>
-      <label><input type="radio" name="contact" value="email"> Связаться по почте</label>
-      <label><input type="checkbox" id="agree"> Согласие на обработку данных</label>
-
-      <button onclick="sendRequest()">Послать</button>
-      <p id="form-message"></p>
-    </div>
-  </div>
-
-  <footer>© 2025 Котозавод. Все коты пушистые 🐈</footer>
-<div id="toast-container"></div>
->>>>>>> Stashed changes
 </body>
 </html>

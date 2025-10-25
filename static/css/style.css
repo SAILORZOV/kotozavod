@@ -1,201 +1,115 @@
-<<<<<<< Updated upstream
 /* === Общие стили === */
-=======
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
-
-:root {
---accent: #4a90e2;
---accent-dark: #2c6ed5;
---bg-color: #f7f9fc;
-
-  --text-color: #333;
-  --card-bg: #ffffff;
-  --shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
->>>>>>> Stashed changes
 body {
   margin: 0;
-  font-family: 'Nunito', sans-serif;
-  background: var(--bg-color);
-  color: var(--text-color);
-  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
 }
 
-a {
-  color: var(--accent-dark);
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
+h1, h2 {
+  margin-top: 0;
+  font-weight: normal;
 }
 
 /* === Навигация === */
 .navbar {
-  background: var(--accent);
-  box-shadow: var(--shadow);
-  padding: 10px 0;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  z-index: 1000;
+  justify-content: center;
 }
 
 .navbar_inner {
-  max-width: 1000px;
-  margin: 0 auto;
+  width: 95%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 16px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:visited {
+  color: white;
+}
+
+.navbar a:hover {
+  color: lightgray;
+}
+
+.navbar a:active {
+  color: lightgray;
 }
 
 .logo {
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: white;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.menu {
   display: flex;
-  align-items: center;
-  gap: 6px;
-  position: relative;
+  gap: 15px;
+  flex: 1;
+  justify-content: flex-end;
 }
 
-<<<<<<< Updated upstream
 /* === Контент под шапкой === */
-=======
-/* Ушки кота */
-.logo::before,
-.logo::after {
-  content: "";
-  position: absolute;
-  top: -6px;
-  width: 10px;
-  height: 10px;
-  background: white;
-  border-radius: 2px 2px 0 0;
-}
-.logo::before {
-  left: -10px;
-  transform: rotate(-20deg);
-}
-.logo::after {
-  right: -10px;
-  transform: rotate(20deg);
-}
-
-.menu a {
-  margin-left: 20px;
-  color: white;
-  font-weight: 600;
-  transition: opacity 0.2s, transform 0.2s;
-}
-.menu a:hover {
-  opacity: 0.85;
-  transform: scale(1.05);
-}
-
-/* === Контент === */
->>>>>>> Stashed changes
 .content {
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 0 16px;
-  animation: fadeIn 0.8s ease;
+  margin-top: 70px;
+  padding: 20px;
 }
 
-<<<<<<< Updated upstream
 /* === Карточки котов / клиентов === */
-=======
-h1, h2, h3 {
-  color: var(--accent-dark);
-}
-
-/* === Главная === */
->>>>>>> Stashed changes
 .samples, .clients {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
+  flex-wrap: wrap;
   margin-top: 15px;
 }
 
 .cat-card, .client-card {
-  background: var(--card-bg);
-  border-radius: 20px;
-  box-shadow: var(--shadow);
-  padding: 30px;
-  flex: 1 1 250px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: default;
-}
-.cat-card:hover, .client-card:hover {
-  transform: translateY(-5px) rotate(1deg);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 150px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 /* === Завод котов === */
 .factory {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 20px;
+  gap: 40px;
+  margin: 20px 0;
 }
 
 .cat-preview {
-  flex: 1 1 300px;
-  background: var(--card-bg);
-  border-radius: 20px;
-  box-shadow: var(--shadow);
-  padding: 20px;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
 }
 
-<<<<<<< Updated upstream
 .cat-parts {
   flex: 1;
 }
 
-=======
-/* Анимация котика */
-#cat-display {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  animation: gentle-bounce 3s ease-in-out infinite;
-}
-#cat-display img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 200px;
-  pointer-events: none;
-  user-select: none;
-}
-
-/* Котик «моргает» */
-@keyframes gentle-bounce {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-4px) rotate(1deg); }
-}
-
-.cat-parts {
-  flex: 1 1 250px;
-  background: var(--card-bg);
-  border-radius: 20px;
-  box-shadow: var(--shadow);
-  padding: 20px;
-}
->>>>>>> Stashed changes
 .cat-parts ul {
   list-style: none;
   padding: 0;
 }
-<<<<<<< Updated upstream
 
 .cat-parts li {
   background: white;
@@ -265,141 +179,3 @@ h1, h2, h3 {
   border: 1px solid #ddd;
   max-width: 500px;
 }
-=======
-.cat-parts li {
-  margin-bottom: 15px;
-}
-
-/* === Кнопки === */
-button {
-  background: var(--accent-dark);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  padding: 8px 14px;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
-  font-family: inherit;
-  font-weight: 600;
-}
-button:hover {
-  background: var(--accent);
-  box-shadow: 0 4px 8px rgba(255, 182, 193, 0.4);
-}
-button:active {
-  transform: scale(0.96);
-}
-
-/* === Форма заявки === */
-.fake-form {
-  margin-top: 40px;
-  background: var(--card-bg);
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: var(--shadow);
-  animation: fadeInUp 0.6s ease;
-}
-.fake-form label {
-  display: block;
-  margin: 8px 0;
-}
-.fake-form input[type="text"],
-.fake-form input[type="email"] {
-  width: 100%;
-  padding: 8px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  font-family: inherit;
-}
-#form-message {
-  margin-top: 10px;
-  color: var(--accent-dark);
-  font-weight: 600;
-}
-
-/* === Корзина === */
-.cat-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  border-bottom: 1px solid #eee;
-  padding: 8px 0;
-}
-.cat-item img {
-  width: 80px;
-  border-radius: 12px;
-  animation: float 4s ease-in-out infinite;
-}
-.cat-item button {
-  margin-left: auto;
-}
-
-/* === Подвал === */
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #999;
-  margin-top: 50px;
-  font-size: 0.9rem;
-}
-
-/* === Анимации === */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
-}
-
-/* === Адаптивность === */
-@media (max-width: 700px) {
-  .factory {
-    flex-direction: column;
-  }
-  .navbar_inner {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .menu a {
-    margin-left: 10px;
-  }
-}
-
-/* === Тост (уведомление) === */
-#toast-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 2000;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 10px;
-}
-
-.toast {
-  background: var(--accent-dark);
-  color: white;
-  padding: 10px 18px;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-  font-weight: 600;
-  animation: fadeSlide 0.3s ease, fadeOut 0.3s ease 2s forwards;
-}
-
-@keyframes fadeSlide {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeOut {
-  to { opacity: 0; transform: translateY(-10px); }
-}
-
->>>>>>> Stashed changes

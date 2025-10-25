@@ -1,6 +1,6 @@
 from flask import Flask, render_template, abort
 
-app = Flask(__name__)
+app = Flask(__name__)  # по умолчанию static/ и templates/
 
 @app.route('/')
 def index():
